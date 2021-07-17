@@ -1,0 +1,10 @@
+apiVersion: v1
+name: stickynotes 
+description: Install a postgres database deployment
+keywords:
+- postgres
+- database 
+version: 1.0.0
+maintainers:
+- name: sja 
+  email: adodey1@yahoo.com

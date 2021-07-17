@@ -1,0 +1,7 @@
+namespace:
+  name: test
+ 
+image: postgres
+  tag: 13
+
+replicaCount: 3

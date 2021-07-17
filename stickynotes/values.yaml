@@ -1,0 +1,8 @@
+namespace:
+  name: test
+ 
+image:
+  repository: 1joe/stickynotes
+  tag: latest
+
+replicaCount: 3
