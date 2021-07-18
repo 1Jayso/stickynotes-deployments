@@ -1,7 +1,6 @@
 namespace:
   name: test
  
-image: postgres
-  tag: 13
+image: postgres:13
 
 replicaCount: 3
