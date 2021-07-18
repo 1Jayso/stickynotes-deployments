@@ -19,21 +19,10 @@ spec:
         - name: postgres-container
           image: {{ .Values.image }}
           env:
-            - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: user
-
             - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: password
-
-            - name: POSTGRES_DB
               value: postgres
-
+            - name: PGDATA
+              value: /data/pgdata
           ports:
             - containerPort: 5432
           volumeMounts:
