@@ -5,12 +5,11 @@ metadata:
 spec:
   selector:
     app: postgres-container
-    type: clusterIP
   ports:
     - protocol: TCP
       port: 5432
       targetPort: 5432
-
+  type: clusterIP
 
 
 
