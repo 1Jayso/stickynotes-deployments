@@ -31,12 +31,15 @@ spec:
           ports:
             - containerPort: 8000
           env:
+            - name: POSTGRES_USER
+              value: postgres
             - name: POSTGRES_PASSWORD
               value: postgres
+            - name: POSTGRES_HOST
+              value: postgres-service 
             - name: PGDATA
               value: /data/pgdata
-            - name: POSTGRES_HOST
-              value: postgres-service
+           
            
               
     
