@@ -2,8 +2,4 @@ namespace:
   name: test
  
 image: postgres:13
-<<<<<<< HEAD
-
-=======
->>>>>>> 34d0ab9 (New changes)
 replicaCount: 3

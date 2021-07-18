@@ -21,15 +21,7 @@ spec:
     spec:
       containers:
         - name: postgres-container
-<<<<<<< HEAD
           image: {{ .Values.image }}
-=======
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          resources:
-            requests:
-              cpu: 50m
-              memory: 256Mi
->>>>>>> 34d0ab9 (New changes)
           env:
             - name: POSTGRES_USER
               valueFrom:
