@@ -15,7 +15,7 @@ spec:
             - name: PGDATA
               value: /data/pgdata
             - name: POSTGRES_HOST
-              value: 127.0.0.1
+              value: 35.194.21.158
       restartPolicy: Never
   backoffLimit: 5
 
