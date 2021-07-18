@@ -11,6 +11,6 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: /home/postgres-pv
+    path: /var/lib/postgresql/data
      # Ensure the file directory is created.
     type: DirectoryOrCreate
