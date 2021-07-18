@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: postgres-container
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 5432

@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
+  serviceName: postgres-service
   selector:
     matchLabels:
       app: postgres-container
