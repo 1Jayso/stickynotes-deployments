@@ -24,6 +24,10 @@ spec:
         - name: stickynotes-container
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: IfNotPresent 
+          resources:
+              requests:
+                cpu: 50m
+                memory: 256Mi
           ports:
             - containerPort: 8000
           env:
