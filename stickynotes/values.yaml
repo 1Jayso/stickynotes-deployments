@@ -1,5 +1,5 @@
 namespace:
-  name: test
+  name: sandbox
  
 image:
   repository: 1joe/stickynotes
