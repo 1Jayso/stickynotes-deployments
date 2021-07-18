@@ -10,20 +10,10 @@ spec:
           image: 1joe/stickynotes:latest
           command: ['python', 'manage.py', 'migrate']
           env:
-            - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: user
-
             - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: password
-
-            - name: POSTGRES_HOST
-              value: postgres-service
+              value: postgres
+            - name: PGDATA
+              value: /data/pgdata
       restartPolicy: Never
   backoffLimit: 5
 
