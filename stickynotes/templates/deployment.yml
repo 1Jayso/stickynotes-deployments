@@ -36,7 +36,7 @@ spec:
             - name: PGDATA
               value: /data/pgdata
             - name: POSTGRES_HOST
-              value: 0.0.0.0
+              value: postgres-service
            
               
     

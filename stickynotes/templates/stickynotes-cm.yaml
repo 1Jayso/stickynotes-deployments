@@ -9,5 +9,5 @@ data:
   POSTGRES_DB: postgres
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
-  POSTGRES_HOST: 0.0.0.0
+  POSTGRES_HOST: postgres-service
   PGDATA: /data/pgdata
