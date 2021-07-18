@@ -1,5 +1,5 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: postgres-service
 spec:
@@ -10,3 +10,8 @@ spec:
     - protocol: TCP
       port: 5432
       targetPort: 5432
+
+
+
+
+
