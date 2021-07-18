@@ -44,11 +44,32 @@ spec:
             - name: postgres-volume-mount
               mountPath: /var/lib/postgresql/data
           # Volume Claim
-      volumeClaimTemplates:
-        - metadata:
-            name: postgres-volume-mount
-          spec:
-            accessModes: ["ReadWriteOnce"]
-            resources:
-              requests:
-                storage: 2Gi
+  volumeClaimTemplates:
+    - metadata:
+        name: postgres-volume-mount
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 2Gi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
