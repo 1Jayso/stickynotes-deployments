@@ -12,3 +12,5 @@ spec:
     - ReadWriteMany
   hostPath:
     path: /data/postgres-pv
+     # Ensure the file directory is created.
+    type: DirectoryOrCreate
