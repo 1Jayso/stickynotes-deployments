@@ -20,5 +20,5 @@ spec:
               value: /data/pgdata
             
       restartPolicy: Never
-  backoffLimit: 5
+  backoffLimit: 2
 

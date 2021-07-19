@@ -3,6 +3,6 @@ namespace:
  
 image:
   repository: 1joe/stickynotes
-  tag: latest
+  tag: v1.0.0
 
 replicaCount: 3
