@@ -36,6 +36,12 @@ spec:
             - name: POSTGRES_PASSWORD
               value: postgres
 
+            - name: POSTGRES_DB
+              value: postgres
+              
+            - name: DATABASE_URL
+              value: postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:5432/$(POSTGRES_DB)
+
             - name: POSTGRES_HOST
               value: postgres-service
               
