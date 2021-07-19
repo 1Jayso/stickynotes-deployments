@@ -26,6 +26,8 @@ spec:
 
             - name: POSTGRES_DB
               value: postgres
+            - name: PGDATA
+              value: /data/pgdata
 
           ports:
             - containerPort: 5432
