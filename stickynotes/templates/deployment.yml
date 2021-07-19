@@ -32,17 +32,64 @@ spec:
             - containerPort: 8000
           env:
             - name: POSTGRES_USER
-              value: postgres
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: user
+
             - name: POSTGRES_PASSWORD
-              value: postgres
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: password
+
             - name: POSTGRES_HOST
-              value: postgres 
-            - name: PGDATA
-              value: /data/pgdata
-           
+              value: postgres-service
+              
            
               
     
   
   
   
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: stickynotes-deployment
+#   labels:
+#     app: stickynotes
+#   namespace: {{ .Values.namespace.name }} 
+# spec:
+#   replicas: {{ .Values.replicaCount }} 
+#   selector:
+#     matchLabels:
+#       app: stickynotes-container
+#   strategy:
+#     rollingUpdate:
+#       maxSurge: 25%
+#       maxUnavailable: 25%
+#     type: RollingUpdate 
+#   template:
+#     metadata:
+#       labels:
+#         app: stickynotes-container
+#     spec:
+#       containers:
+#         - name: stickynotes-container
+#           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+#           imagePullPolicy: IfNotPresent 
+#           resources:
+#               requests:
+#                 cpu: 50m
+#                 memory: 256Mi
+#           ports:
+#             - containerPort: 8000
+#           env:
+#             - name: POSTGRES_USER
+#               value: postgres
+#             - name: POSTGRES_PASSWORD
+#               value: postgres
+#             - name: POSTGRES_HOST
+#               value: postgres 
+#             - name: PGDATA
+#               value: /data/pgdata
