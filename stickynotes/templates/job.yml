@@ -16,6 +16,9 @@ spec:
               value: postgres  
             - name: POSTGRES_HOST
               value: postgres-service
+            - name: PGDATA
+              value: /data/pgdata
+            
       restartPolicy: Never
   backoffLimit: 5
 
