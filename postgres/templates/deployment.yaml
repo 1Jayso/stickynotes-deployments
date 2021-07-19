@@ -20,16 +20,9 @@ spec:
           image: {{ .Values.image }}
           env:
             - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: user
-
+              value: postgres
             - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: password
+               value: postgres
 
             - name: POSTGRES_DB
               value: postgres
