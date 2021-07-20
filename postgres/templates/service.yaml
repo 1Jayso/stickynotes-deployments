@@ -14,8 +14,6 @@ spec:
   selector:
       app: postgres-container
 
-
-
 # apiVersion: v1
 # kind: Service
 # metadata:
