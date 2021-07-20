@@ -17,8 +17,8 @@ spec:
             - name: POSTGRES_DB
               value: stickynotesDB
 
-            # - name: POSTGRES_HOST
-            #   value: postgres-service
+            - name: POSTGRES_HOST
+              value: postgres-service
       restartPolicy: Never
   backoffLimit: 2
 
