@@ -7,10 +7,10 @@ metadata:
   labels:
     app: postgres-container
 spec:
+  clusterIP: None
   ports:
   - port: 5432
     name: postgresql-port
-  ClusterIP: None
   selector:
       app: postgres-container
 
