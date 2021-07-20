@@ -34,9 +34,9 @@ metadata:
   labels:
     app: postgres-container
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   # Uncomment the below line to create a Headless Service
-  clusterIP: None
+  # clusterIP: None
   selector:
     app: postgres-container
   ports:
