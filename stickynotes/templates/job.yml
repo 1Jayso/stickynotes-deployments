@@ -11,16 +11,11 @@ spec:
           command: ['python', 'manage.py', 'migrate']
           env:
             - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: user
-
+              value: postgres
             - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: password
+              value: postgres
+            - name: POSTGRES_DB
+              value: stickynotesDB
 
             # - name: POSTGRES_HOST
             #   value: postgres-service
