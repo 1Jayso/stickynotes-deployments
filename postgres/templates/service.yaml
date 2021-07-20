@@ -10,9 +10,9 @@ spec:
   ports:
   - port: 5432
     name: postgresql-port
-  clusterIP: None
+  ClusterIP: None
   selector:
-      name: postgres-container
+      app: postgres-container
 
 
 
