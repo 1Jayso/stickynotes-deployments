@@ -34,10 +34,10 @@ metadata:
 spec:
   type: ClusterIP
   # Uncomment the below line to create a Headless Service
-  # clusterIP: None
+  clusterIP: None
   selector:
     app: postgres-container
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 8080
+    port: 5432
+    targetPort: 5432
