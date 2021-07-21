@@ -18,7 +18,7 @@ spec:
               value: stickynotesDB
 
             - name: POSTGRES_HOST
-              value: 10.4.0.81
+              value: postgres-service
       restartPolicy: Never
   backoffLimit: 2
 
@@ -28,7 +28,7 @@ spec:
 
 
 
-
+# 10.4.0.81
 
 
 # apiVersion: batch/v1

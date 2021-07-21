@@ -40,12 +40,12 @@ spec:
               value: stickynotesDB
 
             - name: POSTGRES_HOST
-              value: 10.4.0.81
+              value: postgres-service
               
            
               
     
-  
+  # 10.4.0.81
   
   
 # apiVersion: apps/v1
