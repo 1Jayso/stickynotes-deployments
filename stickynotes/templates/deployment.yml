@@ -39,8 +39,8 @@ spec:
             - name: POSTGRES_DB
               value: stickynotesDB
 
-            - name: POSTGRES_HOST
-              value: 10.4.0.81
+            # - name: POSTGRES_HOST
+            #   value: 10.4.0.81
               
            
               
