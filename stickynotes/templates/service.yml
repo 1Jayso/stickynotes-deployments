@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: stickynotes-service
+  namespace: {{ .Values.namespace.name }} 
 spec:
   selector:
     app: stickynotes-container
