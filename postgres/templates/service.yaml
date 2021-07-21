@@ -1,32 +1,33 @@
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: postgres-service
-#   namespace: {{ .Values.namespace.name }} 
-
-#   labels:
-#     app: postgres-container
-# spec:
-#   clusterIP: None
-#   ports:
-#   - port: 5432
-#     name: postgresql-port
-#   selector:
-#       app: postgres-container
-  
-
 apiVersion: v1
 kind: Service
 metadata:
   name: postgres-service
   namespace: {{ .Values.namespace.name }} 
-spec:
-  selector:
+
+  labels:
     app: postgres-container
+spec:
+  clusterIP: None
   ports:
-      port: 5432
-      targetPort: 5432
-  type: LoadBalancer
+  - port: 5432
+    name: postgresql-port
+  selector:
+      app: postgres-container
+  type: ClusterIP
+  
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: postgres-service
+#   namespace: {{ .Values.namespace.name }} 
+# spec:
+#   selector:
+#     app: postgres-container
+#   ports:
+#       port: 5432
+#       targetPort: 5432
+#   type: LoadBalancer
 
 
 
