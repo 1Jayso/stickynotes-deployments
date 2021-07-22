@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: django-migrations
 spec:
+  replicas: {{ .Values.replicaCount }} 
   template:
     spec:
       containers:
