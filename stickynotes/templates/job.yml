@@ -5,7 +5,6 @@ metadata:
 spec:
   template:
     spec:
-      replicas: {{ .Values.replicaCount }} 
       containers:
         - name: django
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
