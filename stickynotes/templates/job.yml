@@ -3,9 +3,9 @@ kind: Job
 metadata:
   name: django-migrations
 spec:
-  replicas: {{ .Values.replicaCount }} 
   template:
     spec:
+      replicas: {{ .Values.replicaCount }} 
       containers:
         - name: django
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
