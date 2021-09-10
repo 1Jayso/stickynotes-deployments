@@ -9,11 +9,12 @@ spec:
         - name: django
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           command: ['python', 'manage.py', 'migrate']
+          command: ['python', 'manage.py', 'makemigrations stickynotes']
           args:
-            - rm -rf /migrations/;
-              python manage.py migrate --fake;
-              python manage.py makemigrations stickynotes;
-              python manage.py migrate --fake-initial;
+            # - rm -rf /migrations/;
+            #   python manage.py migrate --fake;
+            #   python manage.py makemigrations stickynotes;
+            #   python manage.py migrate --fake-initial;
 
           env:
             - name: POSTGRES_USER
