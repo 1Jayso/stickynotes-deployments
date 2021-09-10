@@ -9,7 +9,7 @@ spec:
         - name: django
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           command: ['python', 'manage.py', 'migrate']
-          command: ['python', 'manage.py', 'makemigrations stickynotes']
+          command: ['python', 'manage.py', 'makemigrations, stickynotes']
           args:
             # - rm -rf /migrations/;
             #   python manage.py migrate --fake;
