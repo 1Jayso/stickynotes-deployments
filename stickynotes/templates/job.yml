@@ -10,7 +10,11 @@ spec:
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           command: ['python', 'manage.py', 'migrate']
           args:
-            - python manage.py makemigrations stickynotes
+            - rm -rf /migrations/;
+              python manage.py migrate --fake;
+              python manage.py makemigrations stickynotes;
+              python manage.py migrate --fake-initial;
+
           env:
             - name: POSTGRES_USER
               value: postgres
