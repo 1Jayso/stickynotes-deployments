@@ -8,7 +8,7 @@ spec:
       containers:
         - name: django
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          command: ['python', 'manage.py', 'migrate']
+          command: ['python', 'manage.py', 'migrate', python, manage.py, makemigrations, stickynotes]
           env:
             - name: POSTGRES_USER
               value: postgres
