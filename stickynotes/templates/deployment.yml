@@ -40,7 +40,7 @@ spec:
               value: stickynotesDB
 
             - name: POSTGRES_HOST
-              value: 10.72.2.7
+              value: 10.72.0.14
               
            
               
